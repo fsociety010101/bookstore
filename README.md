@@ -19,7 +19,7 @@ Simple CRUD web application using ***React, Spring Boot*** & ***MySQL*** running
   ```
   or simply run through IDE of choice e.g. *IntelliJ*.
 
-- ### React Frontend Application:
+- ### *(Work in progress!)* React Frontend Application:
   - Install all dependecies:
     ```
     npm install

@@ -33,9 +33,14 @@ public class DbInit implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         itemRepository.saveAll(List.of(
-                new Item("Harry Potter 1", new BigDecimal("118.45"), "https://m.media-amazon.com/images/I/51zZ3SAulVL._SX334_BO1,204,203,200_.jpg"),
-                new Item("Ziemia Obiecana", new BigDecimal("77.79"), "https://m.media-amazon.com/images/I/41hm3xYuv3L._SX331_BO1,204,203,200_.jpg"),
-                new Item("NIC MNIE NIE ZŁAMIE", new BigDecimal("36.46"), "https://m.media-amazon.com/images/I/41ZVR-cw7wL._SX333_BO1,204,203,200_.jpg")
+                new Item("The Art of Clean Code. Jak pisać czysty kod.", new BigDecimal("41.30"), "https://static01.helion.com.pl/global/okladki/vbig/theart.jpg"),
+                new Item("JavaScript. Przewodnik. Poznaj język.", new BigDecimal("69.50"), "https://static01.helion.com.pl/global/okladki/vbig/jspp7v.jpg"),
+                new Item("React w działaniu. Tworzenie aplikacji internetowych.", new BigDecimal("39.99"), "https://static01.helion.com.pl/global/okladki/vbig/reacw2.jpg"),
+                new Item("Java. Kompendium programisty.", new BigDecimal("139.30"), "https://static01.helion.com.pl/global/okladki/vbig/javk12.jpg"),
+                new Item("Kombinacje C++. 648 łamigłówek.", new BigDecimal("99.98"), "https://static01.helion.com.pl/global/okladki/vbig/komcpp.jpg"),
+                new Item("Potoki danych. Leksykon kieszonkowy. ", new BigDecimal("34.49"), "https://static01.helion.com.pl/global/okladki/vbig/potdan.jpg"),
+                new Item("Cyberbezpieczeństwo dla bystrzaków. Wydanie II", new BigDecimal("71.25"), "https://static01.helion.com.pl/global/okladki/vbig/cybeb2.jpg"),
+                new Item("Kubernetes. Tworzenie systemów rozproszonych.", new BigDecimal("142.90"), "https://static01.helion.com.pl/global/okladki/vbig/kuber3.jpg")
         ));
         User user = new User("admin@gmail.com","admin",Role.ROLE_ADMIN,new ArrayList<Order>());
         User user1 = new User("user@gmail.com","user", Role.ROLE_USER,new ArrayList<Order>());
