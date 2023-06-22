@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+<header th:replace="fragments/header :: ShopHeader"></header>
+
+<div class="main-content">
+    <div class="item" th:each="item : ${items}">
+        <p class="item-name" th:text="${item.name}"></p>
+
+        <img th:src="@{${item.imgUrl}}">
+
+        <div>
+            <span>Cena: </span>
+            <span th:text="${item.price}"> </span>
+            <span>zł</span>
+        </div>
+
+        <a th:href="@{'/admin/delete/' + ${item.id}}" class="add-btn">Usun</a>
+
+    </div>
+
+</div>
+</body>
+</html>
